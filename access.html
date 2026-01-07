@@ -1,0 +1,245 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+        
+            access |
+        
+        Yusheng Ji Laboratory</title>
+    <meta name="keywords" content="Yusheng Ji, National Institute of Informatics, NII, 計宇生, 国立情報学研究所">
+    <meta name="description" content="">
+
+    <!-- スタイルシートリンク -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/gallery.css"/>
+
+    <!-- page scroll -->
+    <script type="text/javascript" src="static/js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="static/js/underscore-min.js"></script>
+    <script type="text/javascript" src="static/js/backbone-min.js"></script>
+    <script type="text/javascript" src="static/js/news.js"></script>
+    
+
+
+
+<script src="static/leaflet/leaflet.js"></script>
+
+
+
+
+<script id="force-img-path" type="application/json">false</script>
+<script id="Control-ResetView-ICON" type="application/json">"/static/leaflet/images/reset-view.png"</script>
+<script src="static/leaflet/leaflet.extras.js"></script>
+
+<script id="with-forms" type="application/json">false</script>
+
+<script id="Control-ResetView-TITLE" type="application/json">"Reset view"</script>
+
+<script src="static/leaflet/draw/leaflet.draw.i18n.js"></script>
+
+    
+<link rel="stylesheet" href="static/leaflet/leaflet.css" />
+<link rel="stylesheet" href="static/leaflet/leaflet.extras.css" />
+
+
+    <script type="text/javascript">
+    // 3. ページトップへスクロールする
+    $(function(){
+         $("#toTop a").click(function(){
+         $('html,body').animate({ scrollTop: $($(this).attr("href")).offset().top }, 'slow','swing');
+         return false;
+         })
+    });
+    $(function(){
+         $(".toTop2 a").click(function(){
+         $('html,body').animate({ scrollTop: $($(this).attr("href")).offset().top }, 'slow','swing');
+         return false;
+         })
+    });
+    $(function(){
+         $(".toTop3 a").click(function(){
+         $('html,body').animate({ scrollTop: $($(this).attr("href")).offset().top }, 'slow','swing');
+         return false;
+         })
+    });
+    </script>
+</head>
+
+<body id="sub">
+    <div id="container">
+        
+            <div id="header">
+                <a href="index.html" class="top">
+                    <img src="static/img/common/logo.png" width="250" height="100" alt="Yusheng Ji Laboratory" />
+                </a>
+                <a href="jp/access.html" class="link_jp">Japanese［日本語］</a>
+                
+            </div>
+            <div class="clear"></div>
+
+            <div id="left_menu" class="
+                    
+                    
+                    
+                    
+                    
+                    
+                        m_m6_on
+                    
+                    ">
+                <ul>
+                    <li class="m_m1">
+                        <a href="index.html" >Home</a>
+                    </li>
+                    <li class="m_m2">
+                        <a href="member.html" >People</a>
+                    </li>
+                    <li class="m_m3">
+                        <a href="research.html" >Research</a>
+                    </li>
+                    <li class="m_m4">
+                        <a href="publication.html" >Publications</a>
+                    </li>
+                    <li class="m_m5">
+                        <a href="gallery.html" >Gallery</a>
+                    </li>
+                    <li class="m_m6 on">
+                        <a href="access.html" >Access</a>
+                    </li>
+                    <li class="m_m7">
+                        <a href="new.html">News</a>
+                    </li>
+                </ul>
+            </div>
+        
+        
+
+<div id="contents" class="contact">
+
+    <h1>Access</h1>
+
+    <div id="info">
+        <img src="static/img/contacts/building.jpg" width="133" height="200" alt=""/>
+        <dl>
+            <dt>Yusheng Ji Laboratory<br></dt>
+            <dd>National Institute of Informatics</dd>
+            <dd>2-1-2 Hitotsubashi, Chiyoda-ku, <br>
+                Tokyo, Japan, 101-8430 <span class="clear"></span></dd>
+        </dl>
+        <div class="train">
+            <strong>By Train (Subway)</strong><br>
+            Tokyo Metro Hanzomon Line / Toei Mita Line /<br>
+            Toei Shinjuku Line <span style="font-style: italic;">"JIMBOCHO"</span> Exit A8, A9 <br>
+            Toyko Metro Tozai Line <span style="font-style: italic;">"TAKEBASHI"</span> Exit 1b<br>
+            3-5 minutes walk from the stations <br>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    
+
+<div id="map_canvas" class="leaflet-container-default"></div>
+
+<script >
+(function () {
+
+    function loadmap() {
+        var djoptions = {"srid": null, "extent": [[-90, -180], [90, 180]], "fitextent": true, "center": null, "zoom": null, "precision": 6, "minzoom": null, "maxzoom": null, "layers": [["OSM", "//tile.openstreetmap.org/{z}/{x}/{y}.png", "\u00a9 <a href="http://127.0.0.1:8001/\&quot;https://www.openstreetmap.org/copyright\&quot;">OpenStreetMap</a> contributors"]], "overlays": [], "attributionprefix": null, "scale": "metric", "minimap": false, "resetview": true, "tilesextent": []},
+            options = {djoptions: djoptions, initfunc: loadmap,
+                       globals: false, callback: moveMap()},
+            map = L.Map.djangoMap('map_canvas', options);
+        
+    }
+    var loadevents = ["load"];
+    if (loadevents.length === 0) loadmap();
+    else if (window.addEventListener) for (var i=0; i<loadevents.length; i++) window.addEventListener(loadevents[i], loadmap, false);
+    else if (window.jQuery) jQuery(window).on(loadevents.join(' '), loadmap);
+    
+})();
+</script>
+
+    <script>
+        function moveMap() {
+            var map = L.map('map_canvas').setView([35.692635, 139.7553373], 17);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+            }).addTo(map);
+
+            L.marker([35.6926, 139.7578]).addTo(map)
+                .bindPopup("Yusheng Ji Laboratory")
+                .openPopup();
+        }
+    </script>
+
+    <div class="clear"></div>
+    <br>
+    <h3>Other Links</h3>
+    <ul class="links">
+
+        <li><a href="http://www.nii.ac.jp/en/" target="_blank">National Institute of Informatics</a></li>
+        <li><a href="http://www.soken.ac.jp/en/" target="_blank">The Graduate University for Advanced Studies (SOKENDAI)</a>
+        </li>
+        <li><a href="http://www.nii.ac.jp/graduate/index_e.html" target="_blank">Department of Informatics, School of Multidisciplinary Science,<br>
+                The Graduate University for Advanced Studies (SOKENDAI)</a></li>
+    </ul>
+</div>
+
+
+        <div class="clear"></div>
+
+        
+            <div id="toTop"><a href="access.html#container"><img src="static/img/common/page_top_off.jpg" width="174" height="40" alt="page top" /></a></div>
+        
+    </div>
+
+    
+        
+
+<div id="footer">
+    <div class="textarea">
+        <ul class="f_menu">
+		<li class="f_m1"><a href="index.html">Home</a></li>
+		<li class="f_m2"><a href="member.html">People</a></li>
+		<li class="f_m3"><a href="research.html">Research</a></li>
+		<li class="f_m4"><a href="publication.html">Publications</a></li>
+		<li class="f_m7"><a href="new.html">News</a></li>
+                <li class="f_m5"><a href="gallery.html">Gallery</a></li>
+                <li class="f_m6"><a href="access.html">Access</a></li>
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+	<div class="address">
+            <strong>Yusheng Ji Laboratory</strong>
+            <a href="http://www.nii.ac.jp/en/" target="_blank">National Institute of Informatics </a> &nbsp;&nbsp;&nbsp; 2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo 101-8430
+        </div>
+        <!-- <div class="address"><strong>計宇生研究室</strong> <a href="http://www.nii.ac.jp/" target="_blank">国立情報学研究所</a> &nbsp;&nbsp;&nbsp;〒101-8430
+            東京都千代田区一ツ橋2-1-2-->
+    </div>
+    <div class="copyright">Copyright &copy; Yusheng Ji Laboratory All Rights Reserved.</div>
+    <div class="clear"></div>
+</div>
+
+    
+</body>
+</html>

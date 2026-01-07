@@ -1,0 +1,388 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+        
+            ギャラリー |
+        
+        計宇生研究室</title>
+    <meta name="keywords" content="Yusheng Ji, National Institute of Informatics, NII, 計宇生, 国立情報学研究所">
+    <meta name="description" content="">
+
+    <!-- スタイルシートリンク -->
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/gallery.css"/>
+
+    <!-- page scroll -->
+    <script type="text/javascript" src="../static/js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/underscore-min.js"></script>
+    <script type="text/javascript" src="../static/js/backbone-min.js"></script>
+    <script type="text/javascript" src="../static/js/news.js"></script>
+    
+
+
+
+<script src="../static/leaflet/leaflet.js"></script>
+
+
+
+
+<script id="force-img-path" type="application/json">false</script>
+<script id="Control-ResetView-ICON" type="application/json">"/static/leaflet/images/reset-view.png"</script>
+<script src="../static/leaflet/leaflet.extras.js"></script>
+
+<script id="with-forms" type="application/json">false</script>
+
+<script id="Control-ResetView-TITLE" type="application/json">"Reset view"</script>
+
+<script src="../static/leaflet/draw/leaflet.draw.i18n.js"></script>
+
+    
+<link rel="stylesheet" href="../static/leaflet/leaflet.css" />
+<link rel="stylesheet" href="../static/leaflet/leaflet.extras.css" />
+
+
+    <script type="text/javascript">
+    // 3. ページトップへスクロールする
+    $(function(){
+         $("#toTop a").click(function(){
+         $('html,body').animate({ scrollTop: $($(this).attr("href")).offset().top }, 'slow','swing');
+         return false;
+         })
+    });
+    $(function(){
+         $(".toTop2 a").click(function(){
+         $('html,body').animate({ scrollTop: $($(this).attr("href")).offset().top }, 'slow','swing');
+         return false;
+         })
+    });
+    $(function(){
+         $(".toTop3 a").click(function(){
+         $('html,body').animate({ scrollTop: $($(this).attr("href")).offset().top }, 'slow','swing');
+         return false;
+         })
+    });
+    </script>
+</head>
+
+<body id="sub">
+    <div id="container">
+        
+            <div id="header">
+                <a href="index.html" class="top">
+                    <img src="../static/img/common/logo.png" width="250" height="100" alt="計宇生研究室" />
+                </a>
+                <a href="../gallery.html" class="link_jp">English［英語］</a>
+                
+            </div>
+            <div class="clear"></div>
+
+            <div id="left_menu" class="
+                    
+                    
+                    
+                    
+                    
+                        m_m5_on
+                    
+                    
+                    ">
+                <ul>
+                    <li class="m_m1">
+                        <a href="index.html" >トップ</a>
+                    </li>
+                    <li class="m_m2">
+                        <a href="member.html" >メンバー</a>
+                    </li>
+                    <li class="m_m3">
+                        <a href="research.html" >研究内容</a>
+                    </li>
+                    <li class="m_m4">
+                        <a href="publication.html" >業績・論文</a>
+                    </li>
+                    <li class="m_m5 on">
+                        <a href="gallery.html" >ギャラリー</a>
+                    </li>
+                    <li class="m_m6">
+                        <a href="access.html" >アクセス</a>
+                    </li>
+                    <li class="m_m7">
+                        <a href="new.html">ニュース</a>
+                    </li>
+                </ul>
+            </div>
+        
+        
+
+
+<!-- コンテンツ -->
+<div id="contents" class="gallery">
+
+    <h1>ギャラリー </h1>
+
+
+<!-- news menu -->
+<ul class="menu">
+    <!-- <li class="toTop3"><a href="#group18">2025.03.25 Commemoration of Doctoral Degree – Dr. LE Tien Thanh</a></li> -->
+    <li class="toTop3"><a href="gallery.html#group17">2025.03.14 Farewell Party 2025</a></li>
+    <li class="toTop3"><a href="gallery.html#group16">2024.11.05 Karuizawa Seminar 2024</a></li>
+    <li class="toTop3"><a href="gallery.html#group15">2023.06.08 Lab gathering, June 2023</a></li>
+    <li class="toTop3"><a href="gallery.html#group14">2023.03.20 Prof John C.S. Lui visited our lab, March 2023</a></li>
+    <li class="toTop3"><a href="gallery.html#group13">2017.02.20 Lab members, Feb 2017</a></li>
+    <li class="toTop3"><a href="gallery.html#group12">2017.02.13 Prof. Zhuang visiting</a></li>
+    <li class="toTop3"><a href="gallery.html#group11">2016.03.28 Farewell party for intern students</a></li>
+    <li class="toTop3"><a href="gallery.html#group10">2015.10.26 Karuizawa Seminar 2015</a></li>
+    <li class="toTop3"><a href="gallery.html#group9">2014.09.25 Graduation Ceremony</a></li>
+    <li class="toTop3"><a href="gallery.html#group7">2013.03.08 Karuizawa Seminar 2013</a></li>
+    <li class="toTop3"><a href="gallery.html#group6">2012.09.18 Farewell Party</a></li>
+    <li class="toTop3"><a href="gallery.html#group5">2012.07.22 With visitors from Chulalongkorn University (Thailand)</a></li>
+    <li class="toTop3"><a href="gallery.html#group4">2012.06.07 OpenHouse@NII</a></li>
+    <li class="toTop3"><a href="gallery.html#group3">2012.03.21 The NII Best Student Award</a></li>
+    <li class="toTop3"><a href="gallery.html#group2">2012.02.03 Farewell party for Uli</a></li>
+    <li class="toTop3"><a href="gallery.html#group8">2011.02.18 New Year Party</a></li>
+    <li class="toTop3"><a href="gallery.html#group1a">Karuizawa Seminar 2007</a></li>
+    <li class="toTop3"><a href="gallery.html#group1">Our members</a></li>
+    <div class="clear"></div>
+</ul> 
+<!-- フォトギャラリー写真エリア -->
+<div id="photos">
+    <h2 id="group17">Farewell Party 2025</h2>
+    <a href="../static/img/gallery/farewell_party_2025_1.jpg" data-lightbox="group17" title="Farewell Party 2025"><img
+        src="../static/img/gallery/farewell_party_2025_1.jpg"/></a>
+
+    <!-- pagetop -->
+    <div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15"
+        alt="page top"/></a></div>
+    <!-- //pagetop -->
+
+    <h2 id="group16">Karuizawa Seminar 2024</h2>
+    <a href="../static/img/gallery/Karuizawa_Seminar_2024_01.jpg" data-lightbox="group16" title="Karuizawa Seminar 2024"><img
+            src="../static/img/gallery/Karuizawa_Seminar_2024_01.jpg"/></a>
+    <a href="../static/img/gallery/Karuizawa_Seminar_2024_02.jpg" data-lightbox="group16" title="Karuizawa Seminar 2024"><img
+                src="../static/img/gallery/Karuizawa_Seminar_2024_02.jpg"/></a>
+    <a href="../static/img/gallery/Karuizawa_Seminar_2024_03.jpg" data-lightbox="group16" title="Karuizawa Seminar 2024"><img
+                    src="../static/img/gallery/Karuizawa_Seminar_2024_03.jpg"/></a>
+    <!-- <a href="/static/img/gallery/Karuizawa_Seminar_2024_04.jpg" rel="lightbox[CategoryA]" title="Karuizawa Seminar 2024"><img
+                        src="/static/img/gallery/Karuizawa_Seminar_2024_04.jpg"/></a> -->
+
+    <!-- pagetop -->
+    <div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15"
+                                                  alt="page top"/></a></div>
+    <!-- //pagetop -->
+    <h2 id="group15">Lab gathering, June 2023</h2>
+    <a href="../static/img/gallery/get_together_june2023.jpeg" rel="lightbox[CategoryA]" title="Lab gathering, June 2023"><img
+            src="../static/img/gallery/get_together_june2023.jpeg"/></a>
+
+    <!-- pagetop -->
+    <div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15"
+                                                  alt="page top"/></a></div>
+    <!-- //pagetop -->
+
+
+    <h2 id="group14">Prof John C.S. Lui visited our lab, March 2023</h2>
+    <a href="../static/img/gallery/john_visit_march_2023.jpg" rel="lightbox[CategoryA]" title="Prof John C.S. Lui visited our lab, March 2023"><img
+            src="../static/img/gallery/john_visit_march_2023.jpg"/></a>
+
+    <!-- pagetop -->
+    <div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15"
+                                                  alt="page top"/></a></div>
+    <!-- //pagetop -->
+
+
+    <h2 id="group13">Lab members, Feb 2017</h2>
+    <a href="../static/img/gallery/DSC_0323-2.jpg" rel="lightbox[CategoryA]" title="Lab members"><img
+            src="../static/img/gallery/DSC_0323-2.jpg"/></a>
+
+    <!-- pagetop -->
+    <div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15"
+                                                  alt="page top"/></a></div>
+    <!-- //pagetop -->
+
+    <h2 id="group12">Prof. Weihua Zhuang from University of Waterloo visited our lab, and gave a seminar on "Mobility
+        modeling for vehicular communication networks".</h2>
+    <a href="../static/img/gallery/zhuang.jpg" rel="lightbox[CategoryA]" title="With Prof. Zhuang"><img
+            src="../static/img/gallery/zhuang.jpg"/></a>
+
+    <!-- pagetop -->
+    <div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15"
+                                                  alt="page top"/></a></div>
+    <!-- //pagetop -->
+
+    <h2 id="group11">Farewell party for intern students</h2>
+    <a href="../static/img/gallery/farewell2016.jpg" rel="lightbox[CategoryA]" title="Farewell Party"><img
+            src="../static/img/gallery/farewell2016.jpg"/></a>
+
+    <!-- pagetop -->
+    <div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15"
+                                                  alt="page top"/></a></div>
+    <!-- //pagetop -->
+
+    <h2 id="group10">Karuizawa Seminar 2015</h2>
+    <a href="../static/img/gallery/karuizawa20150.jpg" rel="lightbox[CategoryA]" title="Karuizawa Seminar"><img
+            src="../static/img/gallery/karuizawa20150.jpg"/></a>
+    <a href="../static/img/gallery/karuizawa20151.jpg" rel="lightbox[CategoryA]" title="Karuizawa Seminar"><img
+            src="../static/img/gallery/karuizawa20151.jpg"/></a>
+    <a href="../static/img/gallery/karuizawa20152.jpg" rel="lightbox[CategoryA]" title="Karuizawa Seminar"><img
+            src="../static/img/gallery/karuizawa20152.jpg"/></a>
+
+
+    <!-- pagetop -->
+    <div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15"
+                                                  alt="page top"/></a></div>
+    <!-- //pagetop -->
+
+
+    <h2 id="group9">Graduation Ceremony</h2>
+    <a href="../static/img/gallery/graduation.jpg" rel="lightbox[CategoryA]" title="Graduation Ceremony"><img
+            src="../static/img/gallery/graduation.jpg" width="180" height="120" alt=""/></a>
+    <!--<a href="img/gallery/graduation2.jpg" rel="lightbox[CategoryA]" title="Graduation Ceremony"><img-->
+    <!--src="img/gallery/graduation2.jpg" width="180" height="120" alt=""/></a>-->
+
+    <!-- pagetop -->
+    <div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15" alt="page top"/></a>
+    </div>
+    <!-- //pagetop -->
+
+    <h2 id="group7">Karuizawa Seminar 2013</h2>
+<a href="../static/img/gallery/Karuizawa2013_1.jpg" rel="lightbox[CategoryA]" title="Karuizawa Seminar"><img src="../static/img/gallery/karuizawa1.jpg" width="180" height="120" alt="" /></a>
+<a href="../static/img/gallery/Karuizawa2013_2.jpg" rel="lightbox[CategoryA]" title="Karuizawa Seminar"><img src="../static/img/gallery/karuizawa21.jpg" width="180" height="120" alt="" /></a>
+
+<!-- pagetop -->
+<div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15" alt="page top" /></a></div>
+<!-- //pagetop -->
+
+
+
+<h2 id="group6">Farewell Party</h2>
+<a href="../static/img/gallery/get_together1209.jpg" rel="lightbox[CategoryA]" title="Farewell Party"><img src="../static/img/gallery/get_together1209.jpg" width="180" height="119" alt="" /></a>
+
+<!-- pagetop -->
+<div class="toTop2"><a href="gallery.html#container">
+    <img src="../static/img/common/page_top2.gif" width="80" height="15" alt="page top" /></a></div>
+<!-- //pagetop -->
+
+
+
+<h2 id="group5">With visitors from Chulalongkorn University (Thailand)</h2>
+<a href="../static/img/gallery/p20120605_l.jpg" rel="lightbox[CategoryA]" title="Meeting with Asst. Prof. Dr. Supavadee Aramvith"><img src="../static/img/gallery/p20120605_s.jpg" width="180" height="120" alt="" /></a>
+<a href="../static/img/gallery/p20120719_l.jpg" rel="lightbox[CategoryA]" title="Meeting with Prof. Chaodit"><img src="../static/img/gallery/p20120719_s.jpg" width="180" height="120" alt="" /></a>
+<a href="../static/img/gallery/p20120720_l.jpg" rel="lightbox[CategoryA]" title="Meeting with Prof. Chaodit"><img src="../static/img/gallery/p20120720_s.jpg" width="180" height="120" alt="" /></a>
+
+<!-- pagetop -->
+<div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15" alt="page top" /></a></div>
+<!-- //pagetop -->
+
+<h2 id="group4">OpenHouse@NII</h2>
+<a href="../static/img/gallery/p20120607_l.jpg" rel="lightbox[CategoryA]" title="Open House Presentation"><img src="../static/img/gallery/p20120607_s.jpg" width="180" height="120" alt="" /></a>
+
+<!-- pagetop -->
+<div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15" alt="page top" /></a></div>
+<!-- //pagetop -->
+
+
+<h2 id="group3">The NII Best Student Award</h2>
+<a href="../static/img/gallery/p1_l.jpg" rel="lightbox[CategoryA]" title="the NII Best Student Award"><img src="../static/img/gallery/p1_s.jpg" width="180" height="120" alt="" /></a>
+<a href="../static/img/gallery/p2_l.jpg" rel="lightbox[CategoryA]" title="Kien NGUYEN got the NII Best Student Award"><img src="../static/img/gallery/p2_s.jpg" width="180" height="120" alt="" /></a>
+<a href="../static/img/gallery/p3_l.jpg" rel="lightbox[CategoryA]" title="Kien NGUYEN got the NII Best Student Award"><img src="../static/img/gallery/p3_s.jpg" width="180" height="120" alt="" /></a>
+
+<!-- pagetop -->
+<div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15" alt="page top" /></a></div>
+<!-- //pagetop -->
+
+<h2  id="group2">Farewell party for Uli</h2>
+<a href="../static/img/gallery/p4_l.jpg" rel="lightbox[CategoryA]" title="Farewell party for Uli"><img src="../static/img/gallery/p4_s.jpg" width="180" height="120" alt="" /></a>
+<a href="../static/img/gallery/p5_l.jpg" rel="lightbox[CategoryA]" title="Farewell party for Uli"><img src="../static/img/gallery/p5_s.jpg" width="180" height="120" alt="" /></a>
+
+<!-- pagetop -->
+<div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15" alt="page top" /></a></div>
+<!-- //pagetop -->
+
+<h2  id="group8">New Year Party</h2>
+<a href="../static/img/gallery/farewell111.jpg" rel="lightbox[CategoryA]" title="New Year Party"><img src="../static/img/gallery/farewell1111.jpg" width="180" height="135" alt="" /></a>
+<a href="../static/img/gallery/farewell112.jpg" rel="lightbox[CategoryA]" title="New Year Party"><img src="../static/img/gallery/farewell1121.jpg" width="180" height="135" alt="" /></a>
+
+<!-- pagetop -->
+<div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15" alt="page top" /></a></div>
+<!-- //pagetop -->
+
+    <h2 id="group1a">Karuizawa Seminar 2007</h2>
+    <a href="../static/img/gallery/p20071111_l.jpg" rel="lightbox[CategoryA]" title="Lab members"><img
+            src="../static/img/gallery/p20071111_s.jpg"/></a>
+    <a href="../static/img/gallery/p20071110_l.jpg" rel="lightbox[CategoryA]" title="Lab members"><img
+            src="../static/img/gallery/p20071110_s.jpg"/></a>
+
+    <!-- pagetop -->
+    <div class="toTop2"><a href="gallery.html#container"><img src="../static/img/common/page_top2.gif" width="80" height="15"
+                                                  alt="page top"/></a></div>
+    <!-- //pagetop -->
+
+
+    <h2 id="group1">Our members</h2>
+<a href="../static/img/gallery/p6_l.jpg" rel="lightbox[CategoryA]" title="Lab members"><img src="../static/img/gallery/p6_s.jpg" width="180" height="120" alt="" /></a>
+<a href="../static/img/gallery/p7_l.jpg" rel="lightbox[CategoryA]" title="Lab members"><img src="../static/img/gallery/p7_s.jpg" width="180" height="120" alt="" /></a>
+<a href="../static/img/gallery/p20110218_l.jpg" rel="lightbox[CategoryA]" title="Lab members"><img src="../static/img/gallery/p20110218_s.jpg" width="180" height="120" alt="" /></a>
+<a href="../static/img/gallery/p20100927_l.jpg" rel="lightbox[CategoryA]" title="Lab members"><img src="../static/img/gallery/p20100927_s.jpg" width="180" height="120" alt="" /></a>
+<a href="../static/img/gallery/p20100102_l.jpg" rel="lightbox[CategoryA]" title="Lab members"><img src="../static/img/gallery/p20100102_s.jpg" width="180" height="120" alt="" /></a>
+
+</div>
+</div>
+
+
+        <div class="clear"></div>
+
+        
+            <div id="toTop"><a href="gallery.html#container"><img src="../static/img/common/page_top_off.jpg" width="174" height="40" alt="page top" /></a></div>
+        
+    </div>
+
+    
+        
+
+<div id="footer">
+    <div class="textarea">
+        <ul class="f_menu">
+		<li class="f_m1"><a href="index.html">トップ</a></li>
+		<li class="f_m2"><a href="member.html">メンバー</a></li>
+		<li class="f_m3"><a href="research.html">研究内容</a></li>
+		<li class="f_m4"><a href="publication.html">業績・論文</a></li>
+		<li class="f_m7"><a href="new.html">ニュース</a></li>
+                <li class="f_m5"><a href="gallery.html">ギャラリー</a></li>
+                <li class="f_m6"><a href="access.html">アクセス</a></li>
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+	<div class="address">
+            <strong>計宇生研究室</strong>
+            <a href="http://www.nii.ac.jp/en/" target="_blank">国立情報学研究所 </a> &nbsp;&nbsp;&nbsp; 〒101-8430 東京都千代田区一ツ橋2-1-2
+        </div>
+        <!-- <div class="address"><strong>計宇生研究室</strong> <a href="http://www.nii.ac.jp/" target="_blank">国立情報学研究所</a> &nbsp;&nbsp;&nbsp;〒101-8430
+            東京都千代田区一ツ橋2-1-2-->
+    </div>
+    <div class="copyright">Copyright &copy; Yusheng Ji Laboratory All Rights Reserved.</div>
+    <div class="clear"></div>
+</div>
+
+    
+</body>
+</html>

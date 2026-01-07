@@ -1,0 +1,216 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- 計宇生研究室 -->
+    <title>Yusheng Ji Laboratory</title>
+    <meta name="keywords" content="Yusheng Ji, National Institute of Informatics, NII, 計宇生, 国立情報学研究所">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+    <script type="text/javascript" src="static/js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="static/js/smartRollover.js"></script>
+    <script type="text/javascript" src="static/js/underscore-min.js"></script>
+    <script type="text/javascript" src="static/js/backbone-min.js"></script>
+    <script type="text/javascript" src="static/js/index.js"></script>
+    <script type="text/javascript">
+        function slideSwitch() {
+            var $active = $('#slideshow DIV.active');
+            if ($active.length == 0) $active = $('#slideshow DIV:last');
+            var $next = $active.next().length ? $active.next()
+                : $('#slideshow DIV:first');
+            $active.addClass('last-active');
+            $next.css({opacity: 0.0})
+                .addClass('active')
+                .animate({opacity: 1.0}, 1000, function () {
+                    $active.removeClass('active last-active');
+                });
+        }
+        $(function () {
+            setInterval("slideSwitch()", 5000);
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.fade-area-2').children().hover(function () {
+                $(this).siblings().stop().fadeTo(500, 0.5);
+            }, function () {
+                $(this).siblings().stop().fadeTo(500, 1);
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function myChgPic(myPicURL) {
+            document.images["myBigImage"].src = myPicURL;
+        }
+        function myChgPic2(myPicURL) {
+            document.images["myBigImage2"].src = myPicURL;
+        }
+        function myChgPic3(myPicURL) {
+            document.images["myBigImage3"].src = myPicURL;
+        }
+        function myChgPic4(myPicURL) {
+            document.images["myBigImage4"].src = myPicURL;
+        }
+        function myChgPic5(myPicURL) {
+            document.images["myBigImage5"].src = myPicURL;
+        }
+        function myChgPic6(myPicURL) {
+            document.images["myBigImage6"].src = myPicURL;
+        }
+    </script>
+</head>
+
+<body id="index">
+<div id="container">
+    <div id="main">
+        <h1><img src="static/img/index/h1_index.png" width="281" height="111" alt="Yusheng Ji Laboratory｜計宇生研究室"/></h1>
+        <a href="jp/index.html" class="link_jp">Japanese［日本語］</a>
+        <div id="index_slide">
+            <div id="slideshow">
+                <div class="active"><img src="static/img/index/img_h_1.png" alt=""/></div>
+                <div><img src="static/img/index/img_h_2.png" alt=""/></div>
+                <div><img src="static/img/index/img_h_3.png" alt=""/></div>
+            </div>
+        </div>
+
+	<a href="member.html"><img src="static/img/index/img_01_off.png" width="67" height="83" class="m1_img"
+                                   name="myBigImage"/></a>
+        <a href="research.html"><img src="static/img/index/img_02_off.png" width="63" height="71" class="m2_img"
+                                     name="myBigImage2"/></a>
+        <a href="publication.html"><img src="static/img/index/img_03_off.png" width="67" height="84" class="m3_img"
+                                         name="myBigImage3"/></a>
+        <a href="gallery.html"><img src="static/img/index/img_04_off.png" width="70" height="91" class="m4_img"
+                                    name="myBigImage4"/></a>
+        <a href="access.html"><img src="static/img/index/img_05_off.png" width="116" height="69" class="m5_img"
+                                    name="myBigImage5"/></a>
+        <a href="new.html"><img src="static/img/index/img_06_off.png" width="81" height="63" class="m6_img"
+                                 name="myBigImage6"/></a>
+
+
+        <ul class="fade-area-2">
+            <li class="m_m2"><a href="member.html" onmouseover="/static/img/index/img_01_on.png"
+							      onmouseout="/static/img/index/img_01_off.png">People</a></li>
+            <li class="m_m3"><a href="research.html" onmouseover="/static/img/index/img_02_on.png"
+						     onmouseout="/static/img/index/img_02_off.png">Research</a></li>
+            <li class="m_m4"><a href="publication.html" onmouseover="/static/img/index/img_03_on.png"
+								   onmouseout="/static/img/index/img_03_off.png">Publications</a></li>
+            <li class="m_m5"><a href="gallery.html" onmouseover="/static/img/index/img_04_on.png"
+						    onmouseout="/static/img/index/img_04_off.png">Gallery</a></li>
+            <li class="m_m6"><a href="access.html" onmouseover="/static/img/index/img_05_on.png"
+						    onmouseout="/static/img/index/img_05_off.png">Access</a></li>
+            <li class="m_m7"><a href="new.html" onmouseover="/static/img/index/img_06_on.png"
+							   onmouseout="/static/img/index/img_06_off.png">News</a></li>
+        </ul>
+    </div>
+    <script type="text/template" id="template-news-entry">
+        <dl>
+            <dt><%=data.get('date')%></dt>
+            <dd><a href="http://127.0.0.1:8001/news.html#N_<%=data.get('id')%>"><%=data.get('content')%></a></dd>
+            <div class="clear"></div>
+        </dl>
+    </script>
+    
+        <div id="news" class="news">
+            <div id="n_header" class="n_header">&nbsp;</div>
+            <div id="n_contents" class="n_contents">
+                <div id="n_title" class="n_title"><h2>News</h2><a href="new.html" class="more">Read more</a></div>
+                <div id="n_parts" class="n_parts">
+                    
+                        <dl>
+                            <dt> 2025.04.01 </dt>
+			    <dd> Xiaoyu Wang has been selected as SOKENDAI Special Researcher (JST BOOST Next-Gen AI Talent). </dd>
+                            <div class="clear"></div>
+                        </dl>
+                    
+                        <dl>
+                            <dt> 2025.03.25 </dt>
+			    <dd> LE Tien Thanh received the INOSE Student Encouragement Award of NII.  </dd>
+                            <div class="clear"></div>
+                        </dl>
+                    
+                        <dl>
+                            <dt> 2024.10.08 </dt>
+			    <dd> Xiang Zhang (Former Intern) and Prof. Yusheng Ji received Andrew P. Sage Best Transactions Paper Award by IEEE System, Man, and Cybernetics Society. </dd>
+                            <div class="clear"></div>
+                        </dl>
+                    
+                        <dl>
+                            <dt> 2024.10.01 </dt>
+			    <dd> Xiaoyu Wang has been selected as SOKENDAI Special Researcher (JST SPRING).  </dd>
+                            <div class="clear"></div>
+                        </dl>
+                    
+                        <dl>
+                            <dt> 2024.08.23 </dt>
+			    <dd> Prof. Yusheng Ji received the Best Paper Award of 14th EAI International Conference on Wireless and Satellite Systems. </dd>
+                            <div class="clear"></div>
+                        </dl>
+                    
+                        <dl>
+                            <dt> 2024.05.26 </dt>
+			    <dd> Prof. Yusheng Ji received the 23rd International Conference on Networks Best Paper Award. </dd>
+                            <div class="clear"></div>
+                        </dl>
+                    
+                        <dl>
+                            <dt> 2023.09.26 </dt>
+			    <dd> Caijuan Chen received the Best Student Award of NII. </dd>
+                            <div class="clear"></div>
+                        </dl>
+                    
+                        <dl>
+                            <dt> 2023.09.01 </dt>
+			    <dd> Our previous Project Researcher Le Van An&#x27;s application for KAKENHI Research Activity Start-up is accepted. </dd>
+                            <div class="clear"></div>
+                        </dl>
+                    
+                        <dl>
+                            <dt> 2023.01.10 </dt>
+			    <dd> Xiaoqing Zhang, Le Van An, and Yusheng Ji received the IEEE CCNC Best Paper Award Runner-Up. </dd>
+                            <div class="clear"></div>
+                        </dl>
+                    
+                        <dl>
+                            <dt> 2022.09.28 </dt>
+			    <dd> Caijuan Chen’s application for JSPS DC2 fellowship has been accepted. </dd>
+                            <div class="clear"></div>
+                        </dl>
+                    
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="n_footer" class="n_footer">&nbsp;</div>
+        </div>
+    
+</div>
+
+
+<div id="footer">
+    <div class="textarea">
+        <ul class="f_menu">
+		<li class="f_m1"><a href="index.html">Home</a></li>
+		<li class="f_m2"><a href="member.html">People</a></li>
+		<li class="f_m3"><a href="research.html">Research</a></li>
+		<li class="f_m4"><a href="publication.html">Publications</a></li>
+		<li class="f_m7"><a href="new.html">News</a></li>
+                <li class="f_m5"><a href="gallery.html">Gallery</a></li>
+                <li class="f_m6"><a href="access.html">Access</a></li>
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+	<div class="address">
+            <strong>Yusheng Ji Laboratory</strong>
+            <a href="http://www.nii.ac.jp/en/" target="_blank">National Institute of Informatics </a> &nbsp;&nbsp;&nbsp; 2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo 101-8430
+        </div>
+        <!-- <div class="address"><strong>計宇生研究室</strong> <a href="http://www.nii.ac.jp/" target="_blank">国立情報学研究所</a> &nbsp;&nbsp;&nbsp;〒101-8430
+            東京都千代田区一ツ橋2-1-2-->
+    </div>
+    <div class="copyright">Copyright &copy; Yusheng Ji Laboratory All Rights Reserved.</div>
+    <div class="clear"></div>
+</div>
+
+</body>
+</html>

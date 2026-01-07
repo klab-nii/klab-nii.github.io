@@ -1,0 +1,4 @@
+#photos a > img {
+    max-height: 135px;
+    max-width: 180px;
+}

@@ -165,7 +165,7 @@
 (function () {
 
     function loadmap() {
-        var djoptions = {"srid": null, "extent": [[-90, -180], [90, 180]], "fitextent": true, "center": null, "zoom": null, "precision": 6, "minzoom": null, "maxzoom": null, "layers": [["OSM", "//tile.openstreetmap.org/{z}/{x}/{y}.png", "\u00a9 <a href="http://127.0.0.1:8001/jp/\&quot;https://www.openstreetmap.org/copyright\&quot;">OpenStreetMap</a> contributors"]], "overlays": [], "attributionprefix": null, "scale": "metric", "minimap": false, "resetview": true, "tilesextent": []},
+        var djoptions = {"srid": null, "extent": [[-90, -180], [90, 180]], "fitextent": true, "center": null, "zoom": null, "precision": 6, "minzoom": null, "maxzoom": null, "layers": [["OSM", "//tile.openstreetmap.org/{z}/{x}/{y}.png", "\u00a9 <a href="http://127.0.0.1:8000/jp/\&quot;https://www.openstreetmap.org/copyright\&quot;">OpenStreetMap</a> contributors"]], "overlays": [], "attributionprefix": null, "scale": "metric", "minimap": false, "resetview": true, "tilesextent": []},
             options = {djoptions: djoptions, initfunc: loadmap,
                        globals: false, callback: moveMap()},
             map = L.Map.djangoMap('map_canvas', options);
